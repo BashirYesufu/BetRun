@@ -1,3 +1,5 @@
+import 'package:bet_run_app/screens/onboarding.dart';
+import 'package:bet_run_app/screens/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const BetRun());
@@ -8,11 +10,11 @@ class BetRun extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Container(
-          color: Colors.redAccent,
-        ),
-      ),
+      initialRoute: Splash.id,
+      routes: {
+        Splash.id: (context) => Splash(),
+        OnBoarding.id: (context) => OnBoarding(),
+      },
     );
   }
 }
