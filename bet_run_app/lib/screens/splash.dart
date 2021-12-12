@@ -1,3 +1,4 @@
+import 'package:bet_run_app/reuseables/constants.dart';
 import 'package:bet_run_app/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -29,7 +30,7 @@ class _SplashState extends State<Splash> {
         child: Container(
           margin: EdgeInsets.symmetric(horizontal: 120.0),
           child: Image.asset(
-            'images/splash.png',
+            kBetrunDark,
           ),
         ),
       ),
