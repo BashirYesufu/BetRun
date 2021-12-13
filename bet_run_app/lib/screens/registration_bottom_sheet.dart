@@ -1,3 +1,4 @@
+import 'package:bet_run_app/reuseables/components.dart';
 import 'package:bet_run_app/reuseables/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -33,6 +34,18 @@ class RegistrationBottomSheet extends StatelessWidget {
               color: Color(0xFF9EA1A7),
             ),
             textAlign: TextAlign.center,
+          ),
+          WhiteButton(
+            buttonText: 'Continue with Phone Number',
+            onTap: () {},
+          ),
+          WhiteButton(
+            buttonText: 'Continue with Apple',
+            onTap: () {},
+          ),
+          WhiteButton(
+            buttonText: 'Continue with Google',
+            onTap: () {},
           ),
         ],
       ),
