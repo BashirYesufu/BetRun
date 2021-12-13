@@ -92,3 +92,47 @@ class WhiteButton extends StatelessWidget {
     );
   }
 }
+
+///Gray Text Widget
+class GrayText extends StatelessWidget {
+  const GrayText({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 15.0,
+        fontFamily: kAvenirNext,
+        color: Color(0xFF9EA1A7),
+      ),
+      textAlign: TextAlign.center,
+    );
+  }
+}
+
+///Dark colored title text
+class TitleText extends StatelessWidget {
+  const TitleText({
+    Key? key,
+    required this.text,
+  }) : super(key: key);
+
+  final String text;
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: TextStyle(
+        fontSize: 23.0,
+        fontFamily: kAvenirNext,
+        color: Color(0xFF233249),
+        fontWeight: FontWeight.w600,
+      ),
+    );
+  }
+}

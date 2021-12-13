@@ -15,26 +15,15 @@ class RegistrationBottomSheet extends StatelessWidget {
         children: [
           Column(
             children: [
-              Text(
-                'Log in or Sign Up',
-                style: TextStyle(
-                  fontSize: 23.0,
-                  fontFamily: kAvenirNext,
-                  color: Color(0xFF233249),
-                  fontWeight: FontWeight.w600,
-                ),
+              TitleText(
+                text: 'Log in or Sign Up',
               ),
               SizedBox(
                 height: 20,
               ),
-              Text(
-                'Welcome to Betrun. First things first, Log in or \nSign up so that we can begin.',
-                style: TextStyle(
-                  fontSize: 15.0,
-                  fontFamily: kAvenirNext,
-                  color: Color(0xFF9EA1A7),
-                ),
-                textAlign: TextAlign.center,
+              GrayText(
+                text:
+                    'Welcome to Betrun. First things first, Log in or \nSign up so that we can begin.',
               ),
             ],
           ),
