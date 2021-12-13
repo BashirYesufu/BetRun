@@ -13,9 +13,11 @@ class OnBoarding extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-            kBackground,
-          )),
+            image: AssetImage(
+              kBackground,
+            ),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 80.0),
@@ -24,7 +26,8 @@ class OnBoarding extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 150),
+                margin: EdgeInsets.symmetric(
+                    horizontal: (MediaQuery.of(context).size.width) * 0.4),
                 child: Image.asset(kBetrunLight),
               ),
               Column(
@@ -57,7 +60,7 @@ class OnBoarding extends StatelessWidget {
                     height: 40.0,
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(30.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 15.0),
                     child: GreenButton(
                       buttonText: 'Get Started',
                       onTap: () {

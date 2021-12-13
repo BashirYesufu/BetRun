@@ -10,53 +10,66 @@ class RegistrationBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: kRoundBottomSheet,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Column(
+      child: SingleChildScrollView(
+        child: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              TitleText(
-                text: 'Log in or Sign Up',
-              ),
               SizedBox(
-                height: 20,
+                height: 20.0,
               ),
-              GrayText(
-                text:
-                    'Welcome to Betrun. First things first, Log in or \nSign up so that we can begin.',
+              Column(
+                children: [
+                  TitleText(
+                    text: 'Log in or Sign Up',
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  GrayText(
+                    text:
+                        'Welcome to Betrun. First things first, Log in or \nSign up so that we can begin.',
+                  ),
+                ],
               ),
+              Spacer(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  WhiteButton(
+                    buttonIcon: kPhone,
+                    buttonText: 'Continue with Phone Number',
+                    onTap: () {
+                      Navigator.pop(context);
+                      showModalBottomSheet(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
+                        ),
+                        context: context,
+                        builder: (context) => MobileNumberBottomSheet(),
+                      );
+                    },
+                  ),
+                  WhiteButton(
+                    buttonIcon: kMail,
+                    buttonText: 'Continue with Email',
+                    onTap: () {},
+                  ),
+                  WhiteButton(
+                    buttonIcon: kApple,
+                    buttonText: 'Continue with Apple',
+                    onTap: () {},
+                  ),
+                  WhiteButton(
+                    buttonIcon: kGoogle,
+                    buttonText: 'Continue with Google',
+                    onTap: () {},
+                  ),
+                ],
+              )
             ],
           ),
-          WhiteButton(
-            buttonIcon: kPhone,
-            buttonText: 'Continue with Phone Number',
-            onTap: () {
-              Navigator.pop(context);
-              showModalBottomSheet(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                ),
-                context: context,
-                builder: (context) => MobileNumberBottomSheet(),
-              );
-            },
-          ),
-          WhiteButton(
-            buttonIcon: kMail,
-            buttonText: 'Continue with Email',
-            onTap: () {},
-          ),
-          WhiteButton(
-            buttonIcon: kApple,
-            buttonText: 'Continue with Apple',
-            onTap: () {},
-          ),
-          WhiteButton(
-            buttonIcon: kGoogle,
-            buttonText: 'Continue with Google',
-            onTap: () {},
-          ),
-        ],
+        ),
       ),
     );
   }

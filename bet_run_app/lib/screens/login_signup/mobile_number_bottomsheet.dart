@@ -3,6 +3,7 @@ import 'package:bet_run_app/reuseables/constants.dart';
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dropdown.dart';
 import 'package:country_pickers/utils/utils.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MobileNumberBottomSheet extends StatelessWidget {
@@ -24,62 +25,70 @@ class MobileNumberBottomSheet extends StatelessWidget {
       height: (MediaQuery.of(context).size.height) * 0.7,
       decoration: kRoundBottomSheet,
       child: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Column(
-              children: [
-                SizedBox(
-                  height: 10.0,
-                ),
-                TitleText(
-                  text: 'What is your Mobile \nNumber?',
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    prefixIcon: CountryPickerDropdown(
-                      initialValue: 'NG',
-                      itemBuilder: _buildDropdownItem,
-                      sortComparator: (Country a, Country b) =>
-                          a.isoCode.compareTo(b.isoCode),
-                      onValuePicked: (Country country) {
-                        print("${country.name}");
-                        print("${country.phoneCode}");
-                      },
-                    ),
-                    suffixIcon: Icon(Icons.close),
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(
-                        color: kGreen,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 20.0,
+              ),
+              Column(
+                children: [
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  TitleText(
+                    text: 'What is your Mobile \nNumber?',
+                  ),
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                  TextFormField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      prefixIcon: CountryPickerDropdown(
+                        initialValue: 'NG',
+                        itemBuilder: _buildDropdownItem,
+                        sortComparator: (Country a, Country b) =>
+                            a.isoCode.compareTo(b.isoCode),
+                        onValuePicked: (Country country) {
+                          print("${country.name}");
+                          print("${country.phoneCode}");
+                        },
+                      ),
+                      suffixIcon: Icon(Icons.close),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10.0),
+                        borderSide: BorderSide(
+                          color: kGreen,
+                        ),
+                      ),
+                      hintText: 'Mobile Number',
+                      hintStyle: TextStyle(
+                        fontSize: 17,
+                        fontFamily: 'AvenirNext',
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                    hintText: 'Mobile Number',
-                    hintStyle: TextStyle(
-                      fontSize: 17,
-                      fontFamily: 'AvenirNext',
-                      fontWeight: FontWeight.bold,
-                    ),
                   ),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-              ],
-            ),
-            Spacer(),
-            GreenButton(
-              buttonText: 'Continue',
-              onTap: () {},
-            )
-          ],
+                  SizedBox(
+                    height: 10.0,
+                  ),
+                ],
+              ),
+              // Spacer(),
+              GreenButton(
+                buttonText: 'Continue',
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              )
+            ],
+          ),
         ),
       ),
     );
