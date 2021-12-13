@@ -10,6 +10,7 @@ class BetRun extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: Splash.id,
       routes: {
         Splash.id: (context) => Splash(),

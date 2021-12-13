@@ -16,6 +16,7 @@ class RegistrationBottomSheet extends StatelessWidget {
         ),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Text(
             'Log in or Sign Up',
@@ -36,14 +37,17 @@ class RegistrationBottomSheet extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           WhiteButton(
+            buttonIcon: 'images/phone.png',
             buttonText: 'Continue with Phone Number',
             onTap: () {},
           ),
           WhiteButton(
+            buttonIcon: 'images/apple.png',
             buttonText: 'Continue with Apple',
             onTap: () {},
           ),
           WhiteButton(
+            buttonIcon: 'images/google.png',
             buttonText: 'Continue with Google',
             onTap: () {},
           ),

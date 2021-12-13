@@ -78,7 +78,7 @@ flutter:
 
     - family: AvenirNext
       fonts:
-        - asset: fonts/AvenirNext-Regular.ttf
+        - asset: fonts/AvenirNext-Regular.otf
 
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
