@@ -1,5 +1,5 @@
 import 'package:bet_run_app/reuseables/constants.dart';
-import 'package:bet_run_app/screens/onboarding.dart';
+import 'package:bet_run_app/screens/login_signup/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class Splash extends StatefulWidget {

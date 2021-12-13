@@ -55,8 +55,11 @@ class WhiteButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0),
       child: Material(
-        color: Colors.white12,
-        borderRadius: BorderRadius.circular(10.0),
+        color: Colors.white,
+        shape: RoundedRectangleBorder(
+          side: BorderSide(color: Color(0xFFE2E6EC)),
+          borderRadius: BorderRadius.circular(10.0),
+        ),
         child: MaterialButton(
           elevation: 15.0,
           onPressed: onTap,

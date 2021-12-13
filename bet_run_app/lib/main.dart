@@ -1,5 +1,5 @@
-import 'package:bet_run_app/screens/onboarding.dart';
-import 'package:bet_run_app/screens/splash.dart';
+import 'package:bet_run_app/screens/login_signup/onboarding.dart';
+import 'package:bet_run_app/screens/login_signup/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const BetRun());

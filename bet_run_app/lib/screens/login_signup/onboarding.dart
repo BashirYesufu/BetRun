@@ -1,6 +1,6 @@
 import 'package:bet_run_app/reuseables/components.dart';
 import 'package:bet_run_app/reuseables/constants.dart';
-import 'package:bet_run_app/screens/registration_bottom_sheet.dart';
+import 'package:bet_run_app/screens/login_signup/registration_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 
 class OnBoarding extends StatelessWidget {
