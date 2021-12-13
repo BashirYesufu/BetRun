@@ -56,17 +56,21 @@ class OnBoarding extends StatelessWidget {
                   SizedBox(
                     height: 40.0,
                   ),
-                  GreenButton(
-                    buttonText: 'Get Started',
-                    onTap: () {
-                      showModalBottomSheet(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(30.0)),
-                        ),
-                        context: context,
-                        builder: (context) => RegistrationBottomSheet(),
-                      );
-                    },
+                  Padding(
+                    padding: const EdgeInsets.all(30.0),
+                    child: GreenButton(
+                      buttonText: 'Get Started',
+                      onTap: () {
+                        showModalBottomSheet(
+                          shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(30.0)),
+                          ),
+                          context: context,
+                          builder: (context) => RegistrationBottomSheet(),
+                        );
+                      },
+                    ),
                   ),
                 ],
               ),

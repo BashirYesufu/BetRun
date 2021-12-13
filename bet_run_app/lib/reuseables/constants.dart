@@ -21,3 +21,7 @@ const kRoundBottomSheet = BoxDecoration(
     topRight: Radius.circular(30.0),
   ),
 );
+
+///Colors
+const Color kGreen = Color(0xFF44CAAC);
+const Color kWhite = Colors.white;
