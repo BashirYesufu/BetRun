@@ -24,7 +24,7 @@ class GreenButton extends StatelessWidget {
         child: Text(
           buttonText,
           style: TextStyle(
-            color: Colors.white,
+            color: kWhite,
             fontFamily: kAvenirNext,
             fontWeight: FontWeight.bold,
             fontSize: 16.0,
@@ -52,7 +52,7 @@ class WhiteButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
       child: Material(
-        color: Colors.white,
+        color: kWhite,
         shape: RoundedRectangleBorder(
           side: BorderSide(color: Color(0xFFE2E6EC)),
           borderRadius: BorderRadius.circular(10.0),
@@ -76,10 +76,10 @@ class WhiteButton extends StatelessWidget {
               Text(
                 buttonText,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: kBlack,
                   fontFamily: kAvenirNext,
                   fontWeight: FontWeight.bold,
-                  fontSize: 16.0,
+                  fontSize: 13.0,
                 ),
               ),
             ],
@@ -100,14 +100,17 @@ class GrayText extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: TextStyle(
-        fontSize: 15.0,
-        fontFamily: kAvenirNext,
-        color: Color(0xFF9EA1A7),
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 15.0,
+          fontFamily: kAvenirNext,
+          color: Color(0xFF9EA1A7),
+        ),
+        textAlign: TextAlign.center,
       ),
-      textAlign: TextAlign.center,
     );
   }
 }

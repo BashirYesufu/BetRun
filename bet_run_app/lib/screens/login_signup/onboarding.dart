@@ -57,7 +57,7 @@ class OnBoarding extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 40.0,
+                    height: 20.0,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -67,7 +67,7 @@ class OnBoarding extends StatelessWidget {
                         showModalBottomSheet(
                           shape: RoundedRectangleBorder(
                             borderRadius:
-                                BorderRadius.all(Radius.circular(30.0)),
+                                BorderRadius.all(Radius.circular(20.0)),
                           ),
                           context: context,
                           builder: (context) => RegistrationBottomSheet(),

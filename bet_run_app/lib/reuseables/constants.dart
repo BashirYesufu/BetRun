@@ -15,7 +15,7 @@ const kAvenirNext = 'AvenirNext';
 
 ///Bottomsheet round corners
 const kRoundBottomSheet = BoxDecoration(
-  color: Colors.white,
+  color: kWhite,
   borderRadius: BorderRadius.only(
     topLeft: Radius.circular(30.0),
     topRight: Radius.circular(30.0),
@@ -25,3 +25,4 @@ const kRoundBottomSheet = BoxDecoration(
 ///Colors
 const Color kGreen = Color(0xFF44CAAC);
 const Color kWhite = Colors.white;
+const Color kBlack = Colors.black;
