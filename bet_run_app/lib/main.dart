@@ -1,3 +1,4 @@
+import 'package:bet_run_app/screens/login_signup/code_verification_bottomsheet.dart';
 import 'package:bet_run_app/screens/login_signup/onboarding.dart';
 import 'package:bet_run_app/screens/login_signup/splash.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +16,8 @@ class BetRun extends StatelessWidget {
       routes: {
         Splash.id: (context) => Splash(),
         OnBoarding.id: (context) => OnBoarding(),
+        CodeVerificationBottomsheet.id: (context) =>
+            CodeVerificationBottomsheet(),
       },
     );
   }
