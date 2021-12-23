@@ -1,5 +1,6 @@
 import 'package:bet_run_app/reuseables/components.dart';
 import 'package:bet_run_app/reuseables/constants.dart';
+import 'package:bet_run_app/screens/login_signup/code_verification_bottomsheet.dart';
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_picker_dropdown.dart';
 import 'package:country_pickers/utils/utils.dart';
@@ -85,6 +86,16 @@ class MobileNumberBottomSheet extends StatelessWidget {
                 buttonText: 'Continue',
                 onTap: () {
                   Navigator.pop(context);
+                  showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(20.0),
+                        topRight: Radius.circular(20.0),
+                      ),
+                    ),
+                    context: context,
+                    builder: (context) => CodeVerificationBottomsheet(),
+                  );
                 },
               )
             ],

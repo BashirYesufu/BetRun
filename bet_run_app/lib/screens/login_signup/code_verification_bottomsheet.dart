@@ -1,3 +1,4 @@
+import 'package:bet_run_app/reuseables/constants.dart';
 import 'package:flutter/material.dart';
 
 class CodeVerificationBottomsheet extends StatelessWidget {
@@ -6,6 +7,10 @@ class CodeVerificationBottomsheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 30.0),
+      height: (MediaQuery.of(context).size.height) * 0.7,
+      decoration: kRoundBottomSheet,
+    );
   }
 }
